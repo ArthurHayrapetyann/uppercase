@@ -1,10 +1,11 @@
-export EXE := mec_poq
-export C_FILES := $(wildcard *.cpp)
-export O_FILES := $(patsubst %.cpp, %.o, $(C_FILES))
+export EXE := bin/mec_poq
+export C_FILES := $(wildcard src/*.cpp)
+export O_FILES := $(patsubst src/%.cpp, src/%.o, $(C_FILES))
 
 $(EXE) : $(O_FILES)
 	g++ $^ -o $@
-%.o : %.cpp
+	rm src/*.o
+src/%.o : src/%.cpp
 	g++ -c $^ -o $@
 clean :
-	rm *.o $(EXE)
+	rm output.txt $(EXE)

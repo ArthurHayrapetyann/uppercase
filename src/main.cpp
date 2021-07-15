@@ -1,3 +1,4 @@
+//this function allows you to insert letters and calls "nermucum" a function for these letters
 #include "head.hpp"
 void nermucum(char,char,char,char,char);
 int main(){
@@ -9,6 +10,11 @@ int main(){
 	cout << "Ներմուցեք 5 նիշ" << endl;
 	cin >> a >> b >> c >> d >> e ;
 	nermucum(a,b,c,d,e);
+	
+	
+
+	 
 
 }
-/* tveri nermucum ev funkciaji kanch*/
+
+
